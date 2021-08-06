@@ -20,10 +20,10 @@ warnings.filterwarnings('ignore')
 if __name__ == "__main__":
     # location of train.csv and train_png folder
     # with all the png images
-    csv_path = 'C:\\Users\\MziyandaP\\PycharmProjects\\XrayRecognition\\data\\Train.csv'
-    csv_test_path =  'C:\\Users\\MziyandaP\\PycharmProjects\\XrayRecognition\\data\\Test.csv'
-    data_path = "C:\\Users\\MziyandaP\\PycharmProjects\\XrayRecognition\\data\\train\\"
-    data_path_test = "C:\\Users\\MziyandaP\\PycharmProjects\\XrayRecognition\\data\\Test\\"
+    csv_path = '/data/Train.csv'
+    csv_test_path =  '/data/Test.csv'
+    data_path = "/data/train/"
+    data_path_test = "/data/Test/"
 
     # cuda/cpu device
     if torch.cuda.is_available():
@@ -149,7 +149,7 @@ if __name__ == "__main__":
     df_output = pd.DataFrame()
     df_output["ID"] = np.array(df_test.ID.values.tolist())
     df_output["LABEL"] = np.array(final_outputs)
-    df_output.to_csv("C:\\Users\\MziyandaP\\PycharmProjects\\XrayRecognition\\data\\Submit.csv",index=False)
+    df_output.to_csv("/data/Submit.csv",index=False)
 
 
 
