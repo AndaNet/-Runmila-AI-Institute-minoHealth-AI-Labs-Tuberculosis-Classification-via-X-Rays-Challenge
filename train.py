@@ -122,7 +122,7 @@ if __name__ == "__main__":
         roc_auc = metrics.roc_auc_score(valid_targets, predictions)
         print( f"Epoch={epoch}, Valid ROC AUC={roc_auc}" )
 
-    PATH = 'C:\\Users\\MziyandaP\\PycharmProjects\\XrayRecognition\\data\\xray_net.pth'
+    PATH = '/data/xray_net.pth'
     torch.save(model.state_dict(),PATH)
     model = get_model(pretrained=False)
     model.load_state_dict(torch.load(PATH))
